@@ -1,5 +1,6 @@
-<img src="https://secure.meetupstatic.com/photos/event/6/d/d/highres_445201757.jpeg" alt="Toptal" width="233" />
-<img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/56/593071/c73b67bbe540a18c37939706bbbe3992-thumb_jpg.jpg" alt="VIKING GARAGE" width="233" />
+<img src="https://secure.meetupstatic.com/photos/event/6/d/d/highres_445201757.jpeg" alt="Toptal" width="233" align="left" />
+<img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/56/593071/c73b67bbe540a18c37939706bbbe3992-thumb_jpg.jpg" alt="VIKING GARAGE" width="233" align="right" />
+<br clear="both" />
 
 # blockchain IoT – core
 The core repo for the Blockchain IoT project, including onboarding.
