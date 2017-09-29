@@ -1,5 +1,6 @@
 <img src="https://secure.meetupstatic.com/photos/event/6/d/d/highres_445201757.jpeg" alt="Toptal" width="233" />
 <img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/56/593071/c73b67bbe540a18c37939706bbbe3992-thumb_jpg.jpg" alt="VIKING GARAGE" width="233" />
+
 # blockchain IoT – core
 The core repo for the Blockchain IoT project, including onboarding.
 
@@ -12,6 +13,8 @@ The core repo for the Blockchain IoT project, including onboarding.
 
 ## Slack
 https://blockchainiot.slack.com/open
+
+If you did not get an invitation, please reach out to [Michal](https://github.com/michalmikolajczyk), michal.mikolajczyk at toptal.com
 
 ## Workflow
 We strive to follow the [Kanban development method](https://en.wikipedia.org/wiki/Kanban_(development)) in the project. In our practice, those are the requirements:
