@@ -56,6 +56,7 @@ https://docs.google.com/document/d/1QtdCi4zABw2B0t4zUHncf1yX2hFsMzpVlKlWgtVJi-w/
 * https://iot-analytics.com/5-things-know-about-iot-platform/
 * https://dzone.com/articles/iot-software-platform-comparison
 * https://www.quora.com/What-are-some-of-the-open-source-projects-in-IoT
+* https://auth0.com/blog/javascript-for-microcontrollers-and-iot-part-1/
 #### Networks
 * http://www.iotlandscape.at/ – friends
 * http://www.silkroad40.com/ – also friends
@@ -66,6 +67,9 @@ https://docs.google.com/document/d/1QtdCi4zABw2B0t4zUHncf1yX2hFsMzpVlKlWgtVJi-w/
 * https://devops.com/functional-testing-iot/
 * https://github.com/AppSaloon/ecu-can-bus-simulator
 #### Software (open)
+* https://github.com/rwaldron/johnny-five (JavaScript)
+* https://github.com/hybridgroup/cylon/ (JavaScript)
+* https://github.com/Samsung/iotjs (JavaScript)
 * https://github.com/cesanta
 * https://www.mbed.com/en/platform/
 * https://macchina.io/
@@ -75,6 +79,8 @@ https://docs.google.com/document/d/1QtdCi4zABw2B0t4zUHncf1yX2hFsMzpVlKlWgtVJi-w/
 * https://www.supla.org/en/
 #### Software (proprietary)
 * https://cloud.google.com/solutions/iot/
+#### End-to-End (OSS + OSH)
+* https://tessel.io/
 ### Blockchain IoT
 #### Articles
 * https://www.postscapes.com/blockchains-and-the-internet-of-things/
