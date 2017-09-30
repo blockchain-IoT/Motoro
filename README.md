@@ -53,16 +53,20 @@ https://docs.google.com/document/d/1QtdCi4zABw2B0t4zUHncf1yX2hFsMzpVlKlWgtVJi-w/
 ## References
 ### IoT
 #### Articles
+* https://www.linux.com/news/21-open-source-projects-IoT
 * https://iot-analytics.com/5-things-know-about-iot-platform/
 * https://dzone.com/articles/iot-software-platform-comparison
 * https://www.quora.com/What-are-some-of-the-open-source-projects-in-IoT
 * https://auth0.com/blog/javascript-for-microcontrollers-and-iot-part-1/
+* https://www.postscapes.com
+* http://iotinnovator.com/
+#### Proprietary articles
+* Enterprise IoT Checklist http://go.pardot.com/e/359721/2eHzlZW/dj28/5085969
+* 10 industrial IoT use cases http://go.pardot.com/e/359721/2gNaxAp/4ps6/5538517
 #### Networks
 * http://www.iotlandscape.at/ – friends
 * http://www.silkroad40.com/ – also friends
-* Resources by potential open-source partners
-* Enterprise IoT Checklist http://go.pardot.com/e/359721/2eHzlZW/dj28/5085969
-* 10 industrial IoT use cases http://go.pardot.com/e/359721/2gNaxAp/4ps6/5538517
+ Resources by potential open-source partners
 #### Testing
 * https://devops.com/functional-testing-iot/
 * https://github.com/AppSaloon/ecu-can-bus-simulator
@@ -70,15 +74,28 @@ https://docs.google.com/document/d/1QtdCi4zABw2B0t4zUHncf1yX2hFsMzpVlKlWgtVJi-w/
 * https://github.com/rwaldron/johnny-five (JavaScript)
 * https://github.com/hybridgroup/cylon/ (JavaScript)
 * https://github.com/Samsung/iotjs (JavaScript)
+* https://nodered.org/ (IoT network design)
+* https://iot.eclipse.org/ (Java) https://iot.eclipse.org/projects/
+* https://www.kaaproject.org/ (Java, C, C++)
+* https://www.mainflux.com/ https://github.com/mainflux/mainflux (C/C++, JavaScript, Go and Python)
 * https://github.com/cesanta
 * https://www.mbed.com/en/platform/
-* https://macchina.io/
+* https://github.com/lelylan/lelylan/ (microservices)
+* https://macchina.io/ (JavaScript and C++)
 * http://www.sitewhere.org/
 * https://thingspeak.com/
 * http://www.lelylan.com
 * https://www.supla.org/en/
+* http://www.zettajs.org/ (Node.js, API-first)
+* https://github.com/thingsboard/thingsboard (Device management, data collection, processing and visualization)
+* https://github.com/google/physical-web (Web of Things)
 #### Software (proprietary)
 * https://cloud.google.com/solutions/iot/
+* https://www.ge.com/digital/predix
+#### Apps
+* http://www.blynk.cc/
+* https://www.stringify.com/
+* http://realityeditor.org/
 #### End-to-End (OSS + OSH)
 * https://tessel.io/
 ### Blockchain IoT
