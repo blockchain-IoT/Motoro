@@ -8,9 +8,9 @@ The core repo for the Blockchain IoT project, including onboarding.
 ## Our goal
 **To deliver open-source tools, which integrate blockchain and IoT ecosystems.**
 
-**The tools combined, make for a modular, End-to-End solution. They will be used to develop _transportation_ and _digital control systems_, and _supply chain networks_.**
+The tools combined, make for a modular, End-to-End solution. They will be used to develop _transportation_ and _digital control systems_, and _supply chain networks_.
 
-**We intend to provide low– and mid-level facilities and integrations, to help engineers and organizations to create blockchain-connected IoT systems and devices.**
+We intend to provide low– and mid-level facilities and integrations, to help engineers and organizations to create blockchain-connected IoT systems and devices.
 
 ## Contributing
 Please refer to the [Contributing guidelines for this project](https://github.com/blockchain-IoT/blockchain-IoT-core/blob/master/CONTRIBUTING.md).
