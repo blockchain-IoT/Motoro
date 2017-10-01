@@ -10,6 +10,12 @@ https://blockchainiot.slack.com/open
 
 If you did not get an invitation, please reach out to [Michal](https://github.com/michalmikolajczyk), michal.mikolajczyk at toptal.com
 
+## Adding issues
+Check out the [Issue Template](https://github.com/blockchain-IoT/blockchain-IoT-core/blob/master/issue_template.md)
+
+## Pull Requests
+Check out the [Pull Request Template](https://github.com/blockchain-IoT/blockchain-IoT-core/blob/master/PULL_REQUEST_TEMPLATE.md)
+
 ## Workflow
 We strive to follow the [Kanban development method](https://en.wikipedia.org/wiki/Kanban_(development)) in the project. In our practice, those are the requirements:
 * The person who takes on a task, pushes it through the sequential stages, until code or design is merged into the `master` branch
