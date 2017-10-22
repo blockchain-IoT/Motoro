@@ -1,0 +1,30 @@
+{
+  "name": "blockchain-iot-core",
+  "version": "0.0.1",
+  "description": "Blockchain IoT core toolset",
+  "main": "src/alpha/app.js",
+  "dependencies": {
+    "ethereumjs-testrpc": "^4.1.3",
+    "solc": "^0.4.17",
+    "web3": "0.20.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/alpha/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blockchain-IoT/blockchain-IoT-core.git"
+  },
+  "keywords": [
+    "blockchain",
+    "iot"
+  ],
+  "author": "blockchain-IoT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blockchain-IoT/blockchain-IoT-core/issues"
+  },
+  "homepage": "https://github.com/blockchain-IoT/blockchain-IoT-core#readme"
+}
