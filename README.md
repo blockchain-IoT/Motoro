@@ -12,6 +12,91 @@ The tools combined, make for a modular, End-to-End solution. They will be used t
 
 We intend to provide low– and mid-level facilities and integrations, to help engineers and organizations to create blockchain-connected IoT systems and devices.
 
+## Current state
+
+The current state of the project is that we have an initial Dapp, which includes Smart Contracts, a Node.js build script, a React front-end, and a few tests. The Smart Contract allow for new machines to signup, and assign a counter to every machine. The idea for this prototype is to increment the counter, every time the machine (motorcycle) is started – basically an ignition counter.
+
+The Dapp is full-stack, built using [Truffle](http://truffleframework.com/) Dapp Framework and its [React box](http://truffleframework.com/boxes/react).
+
+## Local development
+
+### DAPPs 101
+
+To understand more how Ethereum and dapps work, please read those two articles:
+
+* https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c
+* http://truffleframework.com/tutorials/ethereum-overview
+
+And then, to get your feet wet, complete this [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) (at least the first part). Our app strongly inherits from the practices described in the tutorial
+
+* [Part 1](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)
+* [Part 2](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f)
+* [Part 3](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-3-331c2712c9df)
+
+### Set up local repo
+
+Basically just git clone the repo, and install its dependencies:
+
+```
+git clone https://github.com/blockchain-IoT/blockchain-IoT-core.git
+cd blockchain-IoT-core
+npm install
+```
+
+### Setting up and running local testnet
+
+We will use [ethereumjs / testrpc](https://github.com/ethereumjs/testrpc). After installing the dependencies from the repo, while still in the root dir of the repo, type the below command to run the testnet:
+
+```
+./node_modules/.bin/testrpc
+```
+
+or you could install `testrpc` globally, and run it like this:
+
+```
+npm install -g ethereumjs-testrpc
+testrpc
+```
+
+Leave the testnet running in a terminal window.
+_Note that we might want to include that script in a single-command setup_
+
+### Install truffle
+
+```
+npm i -g truffle
+```
+
+### Starting our dapp
+
+The dapp lives in `blockchain-IoT-core/src/alpha-react`. Navigate to that directory, install the dependencies:
+
+```
+cd src/alpha-react
+npm i
+```
+
+compile the contracts:
+
+```
+truffle compile
+```
+
+migrate them to the testnet:
+```
+truffle migrate
+```
+
+run the Node.js / React front-end:
+
+```
+npm start
+```
+
+and check that it all works, by accessing the frontend through [http://localhost:3000](http://localhost:3000). That page should open automatically though. 
+
+At the bottom of the page, you should see `Yamaha: _n_`, where `n` is the count of times you refreshed the page :) What is important though, is that the machine – `Yamaha` – is actually added to the Smart Contract the first time the front-end is opened. That is of course very primitive, but working proof of concept and a good starting point. We now need to connect to the Dapp from an IoT device.
+
 ## Contributing
 Please refer to the [Contributing guidelines for this project](https://github.com/blockchain-IoT/blockchain-IoT-core/blob/master/CONTRIBUTING.md).
 ### Adding issues
