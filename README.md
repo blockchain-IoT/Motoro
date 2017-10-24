@@ -1,5 +1,5 @@
 <img src="https://secure.meetupstatic.com/photos/event/6/d/d/highres_445201757.jpeg" alt="Toptal" width="233" align="left" />
-<img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/56/593071/c73b67bbe540a18c37939706bbbe3992-thumb_jpg.jpg" alt="VIKING GARAGE" width="233" align="right" />
+<img src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/22687779_310016029477988_2627937880329620550_n.png?oh=62c5bd577076c0052e93a6c12eefa65b&oe=5A66FB6C" alt="VIKING GARAGE" width="233" align="right" />
 <br clear="both" />
 
 # blockchain IoT – core
