@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SimpleStorageContract from '../build/contracts/SimpleStorage.json'
 import IdentifyMachineContract from '../build/contracts/IdentifyMachine.json'
+import MachineContract from '../build/contracts/Machine.json'
 import getWeb3 from './utils/getWeb3'
 
 import './css/oswald.css'
@@ -48,13 +49,15 @@ class App extends Component {
     const contract = require('truffle-contract')
     const simpleStorage = contract(SimpleStorageContract)
     const identifyMachine = contract(IdentifyMachineContract)
+    const machine = contract(MachineContract)
     simpleStorage.setProvider(this.state.web3.currentProvider)
     identifyMachine.setProvider(this.state.web3.currentProvider)
 
     // Declaring this for later so we can chain functions on SimpleStorage.
     var simpleStorageInstance
     var identifyMachineInstance
-
+    var machineInstance
+    
     // Get accounts.
     this.state.web3.eth.getAccounts((error, accounts) => {
       simpleStorage.deployed().then((instance) => {
@@ -69,6 +72,7 @@ class App extends Component {
         // Update state with the result.
         return this.setState({ storageValue: result.c[0] })
       })
+      machineInstance.deployed();
       identifyMachine.deployed().then((instance) => {
         identifyMachineInstance = instance
         return identifyMachineInstance.addMachine('Yamaha', {from: accounts[0]})})
