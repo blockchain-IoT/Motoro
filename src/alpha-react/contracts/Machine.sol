@@ -8,7 +8,7 @@ import '../node_modules/zeppelin-solidity/contracts/token/SafeERC20.sol';
  * @dev The Ownable contract has an owner address, and provides basic authorization control
  * functions, this simplifies the implementation of "user permissions".
  */
-contract MachineRepresantation {
+contract Machine {
   using SafeERC20 for ERC20Basic;
 
   address public owner;
@@ -16,7 +16,7 @@ contract MachineRepresantation {
   address public renter;
   string public model;
   string public make;
-  string public vin;
+  bytes32 public vin;
   uint256 public rentalPrice;
   uint256 public rentalCount;
     // ERC20 basic token contract being held
@@ -31,7 +31,7 @@ contract MachineRepresantation {
    * @dev The MachineRepresentation constructor sets the original `owner` of the contract to the sender
    * account. It also sets the model, make and VIN of the machine.
    */
-  function MachineRepresentation(string _model, string _make, string _vin) public {
+  function Machine(string _model, string _make, bytes32 _vin) public {
     owner = msg.sender;
     model = _model;
     make = _make;
