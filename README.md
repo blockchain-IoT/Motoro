@@ -1,24 +1,44 @@
 <img src="https://secure.meetupstatic.com/photos/event/6/d/d/highres_445201757.jpeg" alt="Toptal" width="233" align="left" />
-<img src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/22687779_310016029477988_2627937880329620550_n.png?oh=62c5bd577076c0052e93a6c12eefa65b&oe=5A66FB6C" alt="VIKING GARAGE" width="233" align="right" />
+<img src="http://res.cloudinary.com/hkhuw4b7v/image/upload/v1500318899/VIKINGGARAGE-logo-1200-600.png" alt="VIKING GARAGE" width="233" align="right" />
 <br clear="both" />
 
 # blockchain IoT – core
-The core repo for the Blockchain IoT project, including onboarding.
+
+Ethereum Smart Contracts for decentralized rentals of machines and vehicles.
 
 ## Our goal
-**To deliver open-source tools, which integrate blockchain and IoT ecosystems.**
 
-The tools combined, make for a modular, End-to-End solution. They will be used to develop _transportation_ and _digital control systems_, and _supply chain networks_.
+**To research and develop a decentralized protocol for peer-to-peer rentals of motorised machines.**
 
-We intend to provide low– and mid-level facilities and integrations, to help engineers and organizations to create blockchain-connected IoT systems and devices.
+We combine distributed ledger technologies – blockchain, with the machines we use for transportation and work in the physical world. 
+
+Currently we focus on developing modular Smart Contracts for the Ethereum blockchain. The contracts are building blocks for the decentralized motorised machines and vehicle rental agreements.
+
+The tools combined, make for a modular, End-to-End solution. 
+
+We intend to provide mid– and high-level facilities and integrations, to help engineers and organizations to create relay businesses, which utilise the open and public Smart Contracts.
 
 ## Current state
 
+### February 2018
+
+Added another Smart Contract, fully tested, which can be used for selling and re-selling products and services. Blockchain IoT workshop in Campus Warsaw, Zabkowska 33C in Warsaw, Poland, on 20 February 2018 at 6.30 pm.
+
+### January 2018 
+
+We have prototypes of two crucial Smart Contracts, for (1) registering owners and new machines and (2) renting out motorcycles.
+
+### November 2017
+
 The current state of the project is that we have an initial Dapp, which includes Smart Contracts, a Node.js build script, a React front-end, and a few tests. The Smart Contract allow for new machines to signup, and assign a counter to every machine. The idea for this prototype is to increment the counter, every time the machine (motorcycle) is started – basically an ignition counter.
+
+## Local development
 
 The Dapp is full-stack, built using [Truffle](http://truffleframework.com/) Dapp Framework and its [React box](http://truffleframework.com/boxes/react).
 
-## Local development
+### Local test blockchain
+
+Please use the new cool tool Ganache by Truffle, which spins up a local Ethereum blockchain for development purposes. The tool has a great graphical user interface and UX. [Click here for Ganache.](https://github.com/trufflesuite/ganache)
 
 ### DAPPs 101
 
@@ -27,11 +47,11 @@ To understand more how Ethereum and dapps work, please read those two articles:
 * https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c
 * http://truffleframework.com/tutorials/ethereum-overview
 
-And then, to get your feet wet, complete this [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) (at least the first part). Our app strongly inherits from the practices described in the tutorial
+#### UPDATE new tutorial series – Ethereum Development Walkthrough
 
-* [Part 1](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)
-* [Part 2](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f)
-* [Part 3](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-3-331c2712c9df)
+* [Part 1](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e)
+* [Part 2](https://hackernoon.com/ethereum-development-walkthrough-part-2-truffle-ganache-geth-and-mist-8d6320e12269)
+* [Part 3](https://hackernoon.com/ethereum-development-walkthrough-part-3-security-limitations-and-considerations-d482f05278b4)
 
 ### Set up local repo
 
@@ -185,3 +205,7 @@ https://docs.google.com/document/d/1QtdCi4zABw2B0t4zUHncf1yX2hFsMzpVlKlWgtVJi-w/
 * https://thumpertalk.com/forums/topic/1087931-anyone-using-vortex-ecu-on-their-dirtbike/
 #### Vehicle Remote Hijacking
 * https://www.wired.com/2015/07/hackers-remotely-kill-jeep-highway/
+#### Full Stack Hello World Voting Ethereum Dapp Tutorial
+* https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2
+* https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f
+* https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-3-331c2712c9df
