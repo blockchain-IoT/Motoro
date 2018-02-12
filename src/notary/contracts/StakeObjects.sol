@@ -75,9 +75,10 @@ contract StakeObjects {
         assetAccount.beneficiary.transfer(balance);
     }
 
-    function checkFunderAccount(address asset, address funder) public {
+    function checkFunderAccount(address asset, address funder) public constant returns(uint256) {
         Funder storage funderAccount = assets[asset].funders[funder];
-        CheckFunderAccountEvent(asset, funder, funderAccount.stakesTotal);
+        return funderAccount.stakesTotal;
+        // CheckFunderAccountEvent(asset, funder, funderAccount.stakesTotal);
     }
 
     modifier onlyFunder(address assetAddress) {
