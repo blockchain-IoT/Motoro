@@ -52,6 +52,10 @@
     "dotenv": "^2.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "require-from-string": "1.2.0",
+    "solc": "^0.4.21",
+    "solc-js": "^0.4.20",
+    "web3": "^0.20.1",
     "zeppelin-solidity": "^1.6.0"
   },
   "scripts": {
