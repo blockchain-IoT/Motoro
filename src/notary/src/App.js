@@ -3,8 +3,7 @@ import MachineOwnerContract from '../build/contracts/MachineOwner.json'
 import getWeb3 from './utils/getWeb3'
 
 import './App.css'
-import "./css/uikit.css"
-import "./css/uikit-rtl.css"
+import "../node_modules/uikit/dist/css/uikit.min.css"
 
 import RegisterOwnerForm from './components/form/RegisterOwnerForm'
 import RegisterMachineForm from './components/form/RegisterMachineForm'
