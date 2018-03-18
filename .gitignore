@@ -103,3 +103,5 @@ src/**/build
 
 package-lock.json
 
+parityPass
+ropstenpeers.txt
