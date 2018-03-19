@@ -179,5 +179,7 @@ typings/
 !.vscode/extensions.json
 .history
 
+parityPass
+ropstenpeers.txt
 
 # End of https://www.gitignore.io/api/node,linux,macos,intellij,visualstudiocode
