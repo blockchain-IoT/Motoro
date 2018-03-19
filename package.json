@@ -17,6 +17,7 @@
     "detect-port": "1.0.1",
     "dotenv": "2.0.0",
     "eslint": "3.8.1",
+    "eslint-config-airbnb": "^16.1.0",
     "eslint-config-react-app": "^0.5.0",
     "eslint-loader": "1.6.0",
     "eslint-plugin-flowtype": "2.21.0",
@@ -62,7 +63,10 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "lint":"./node_modules/.bin/eslint .",
+    "lint:fix":"./node_modules/.bin/eslint . --fix"
+
   },
   "jest": {
     "collectCoverageFrom": [
