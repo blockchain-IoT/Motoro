@@ -2,21 +2,21 @@
 <img src="http://res.cloudinary.com/hkhuw4b7v/image/upload/v1500318899/VIKINGGARAGE-logo-1200-600.png" alt="VIKING GARAGE" width="233" align="right" />
 <br clear="both" />
 
-# blockchain IoT – core
+# Motoro blockchain IoT
 
-Ethereum Smart Contracts for decentralized rentals of machines and vehicles.
+Smart contracts for decentralized rentals of vehicles.
+
+<img src="https://uploads.toptal.io/blog/image/125357/toptal-blog-image-1517930970029-b694f3e94eed9b254b2c1e0cbd3a0d00.png" alt="Motoro blockchain IoT the future of transportation" width="100%" />
 
 ## Our goal
 
-**To research and develop a decentralized protocol for peer-to-peer rentals of motorised machines.**
+**To research and develop an infrastructure for decentralized (peer-to-peer) rentals of motorised machines.**
 
-We combine distributed ledger technologies – blockchain, with the machines we use for transportation and work in the physical world. 
+We create the DApps (decentralized applications) for blockchain, to use as agreement templates and for processing transactions for vehicle rentals, trade, services. We integrate the machines we use for transportation and work in the physical world using IoT embedded systems. Our aim is to achieve a trust-less, decentralized consensus. 
 
-Currently we focus on developing modular Smart Contracts for the Ethereum blockchain. The contracts are building blocks for the decentralized motorised machines and vehicle rental agreements.
+We develop the infrastructure as libraries and modular smart contracts for the Ethereum blockchain, with an API in Solidity and Node.js and an interface in React. We aim to provide an end-to-end solution – blockchain through software to hardware.
 
-The tools combined, make for a modular, End-to-End solution. 
-
-We intend to provide mid– and high-level facilities and integrations, to help engineers and organizations to create relay businesses, which utilise the open and public Smart Contracts.
+The goal is support local machine owners and renters, leverage existing machines and make it easier to access direct machine rentals. Read more about it in our article [Motoro – blockchain IoT the future of transportation](https://www.toptal.com/ethereum/motoro-iot-in-transportation). We build on popular open source projects, such as the [Truffle suite](http://truffleframework.com/) and [OpenZeppelin smart contracts](https://openzeppelin.org/). We will support the startups which want to use Motoro blockchain IoT.
 
 ## Current state
 
@@ -40,24 +40,17 @@ The current state of the project is that we have an initial Dapp, which includes
 
 ## Local development
 
-The Dapp is full-stack, built using [Truffle](http://truffleframework.com/) Dapp Framework and its [React box](http://truffleframework.com/boxes/react).
+### local Etherum blockchain – Ganache
 
-### Local test blockchain
+For development, we will use the personal Ethereum blockchain, with a really handy GUI: Ganache. Please download the app from [Ganache @ Truffle Framework](http://truffleframework.com/ganache/) and then just start it. We use port 7545 for local development.
 
-Please use the new cool tool Ganache by Truffle, which spins up a local Ethereum blockchain for development purposes. The tool has a great graphical user interface and UX. [Click here for Ganache.](https://github.com/trufflesuite/ganache)
+#### Truffle suite
 
-### DAPPs 101
+The full-stack DApp uses [Truffle](http://truffleframework.com/) [React box](http://truffleframework.com/boxes/react).
 
-To understand more how Ethereum and dapps work, please read those two articles:
-
-* https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c
-* http://truffleframework.com/tutorials/ethereum-overview
-
-#### UPDATE new tutorial series – Ethereum Development Walkthrough
-
-* [Part 1](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e)
-* [Part 2](https://hackernoon.com/ethereum-development-walkthrough-part-2-truffle-ganache-geth-and-mist-8d6320e12269)
-* [Part 3](https://hackernoon.com/ethereum-development-walkthrough-part-3-security-limitations-and-considerations-d482f05278b4)
+```
+npm i -g truffle
+```
 
 ### Set up local repo
 
@@ -66,17 +59,7 @@ Basically just git clone the repo, and install its dependencies:
 ```
 git clone https://github.com/blockchain-IoT/blockchain-IoT-core.git
 cd blockchain-IoT-core
-npm install
-```
-
-### Setting up and running local Etherum blockchain using Ganache
-
-For development, we will use the personal Ethereum blockchain, with a really handy GUI: Ganache. Please download the app from [Ganache @ Truffle Framework](http://truffleframework.com/ganache/) and then just start it. We use port 7545 for local development.
-
-### Install truffle
-
-```
-npm i -g truffle
+npm i
 ```
 
 ### Compile and migrate the contracts
@@ -100,7 +83,15 @@ run the Node.js / React front-end:
 npm start
 ```
 
-and check that it all works, by accessing the frontend through [http://localhost:3000](http://localhost:3000). That page should open automatically though. 
+and check that it all works, by accessing the frontend through [http://localhost:3000](http://localhost:3000).
+
+
+## UPDATE new tutorial series – Ethereum Development Walkthrough
+
+* [Part 1](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e)
+* [Part 2](https://hackernoon.com/ethereum-development-walkthrough-part-2-truffle-ganache-geth-and-mist-8d6320e12269)
+* [Part 3](https://hackernoon.com/ethereum-development-walkthrough-part-3-security-limitations-and-considerations-d482f05278b4)
+
 
 ## Contributing
 Please refer to the [Contributing guidelines for this project](https://github.com/blockchain-IoT/blockchain-IoT-core/blob/master/CONTRIBUTING.md).
