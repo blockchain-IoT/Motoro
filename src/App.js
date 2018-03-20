@@ -24,9 +24,9 @@ class App extends Component {
                 },
                 registerMachine: {
                     _disabled: true,
-                    model: 'a',
-                    make: 'a',
-                    vin: 'a'
+                    model: '',
+                    make: '',
+                    vin: ''
                 },
             },
             contracts: {
@@ -70,8 +70,9 @@ class App extends Component {
         const MachineOwner = contract(MachineOwnerContract);
         MachineOwner.setProvider(this.state.web3.currentProvider);
 
-        const address = this.state.contracts.machineOwner.address;
-        let _, model, make, vin;
+        const { forms, contracts } = this.state;
+        const address = contract.machineOwner.address;
+        let _, model, make, vin; // don't replace with const
         ({ _, model, make, vin } = this.state.forms.registerMachine);
 
         this.state.web3.eth.getAccounts((error, accounts) => {
@@ -80,12 +81,12 @@ class App extends Component {
                     .then((result) => {
                         const state = { ...this.state };
                         const machine = {
-                            model: model,
-                            make: make,
-                            vin: vin,
+                            model,
+                            make,
+                            vin,
                             address: result.logs[0].args.newMachine
                         };
-                        state.contracts.machineOwner.machines.push(machine);
+                        contracts.machineOwner.machines.push(machine);
                         this.setState(state);
                     });
             })
@@ -106,7 +107,7 @@ class App extends Component {
         form._disabled = !isValid;
 
         // Update state
-        const state = { ...this.state };
+        const { state } = this.state;
         state.forms.registerMachine = form;
         this.setState(state);
     };
@@ -126,20 +127,21 @@ class App extends Component {
     };
 
     render() {
+        const { contracts, forms } = this.state;
         return (
             <div className="App">
                 <div className="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
                     <div className="uk-grid-match" data-uk-grid-margin>
                         <RegisterOwnerForm
-                            onSubmit={(e) => this.ownerFormSubmittedHandler(e)}
-                            state={this.state.forms.registerOwner}
+                            onSubmit={this.ownerFormSubmittedHandler}
+                            state={forms.registerOwner}
                         />
                         <RegisterMachineForm
-                            onChange={(e) => this.machineFormChangedHandler(e)}
-                            onSubmit={(e) => this.machineFormSubmittedHandler(e)}
-                            state={this.state.forms.registerMachine}
+                            onChange={this.machineFormChangedHandler}
+                            onSubmit={this.machineFormSubmittedHandler}
+                            state={forms.registerMachine}
                         />
-                        <MachineList machines={this.state.contracts.machineOwner.machines} />
+                        <MachineList machines={contracts.machineOwner.machines} />
                     </div>
                 </div>
             </div>
