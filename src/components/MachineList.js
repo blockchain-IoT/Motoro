@@ -1,8 +1,12 @@
 import React from 'react';
 
 const machineList = (props) => {
-    const vins = props.machines.map((machine) => <li> {machine.vin} </li>);
-    const addresses = props.machines.map((machine) => <li> {machine.address} </li>);
+    let vins = [], addresses = [];
+
+    props.machines.forEach((machine) => {
+        vins.push(<li key={machine.vin}> {machine.vin} </li>);
+        addresses.push(<li key={machine.vin}> {machine.address} </li>);
+    });
 
     return (
 

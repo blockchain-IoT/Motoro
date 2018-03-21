@@ -19,12 +19,12 @@ const registerMachineForm = (props) => {
                     </div>
 
                     <div className="uk-margin">
-                        <input className="uk-input" type="text" placeholder="vin" name="vin"
+                        <input className="uk-input" type="text" placeholder="VIN" name="vin"
                             onChange={props.onChange} value={props.state.vin} />
                     </div>
 
                     <div className="uk-margin">
-                        <button className="uk-button uk-button-default" 
+                        <button className="uk-button uk-button-default"
                         disabled={props.state._disabled} onClick={props.onSubmit}>Register</button>
                     </div>
 
