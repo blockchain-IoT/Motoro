@@ -1,5 +1,4 @@
 sbin
-src/notary/build
 build
 
 # Created by https://www.gitignore.io/api/node,linux,macos,intellij,visualstudiocode
