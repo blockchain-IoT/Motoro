@@ -1,3 +1,4 @@
+/* eslint-disable */
 const Web3 = require('web3')
 const fs = require('fs')
 const solc = require('solc')
@@ -44,4 +45,6 @@ const contractCallback = (err, deployedContract) => {
     }
 }
 
-return IdentifyMachineContract.new(names, contractConfig, contractCallback)
+// Error : 48:1  error  Parsing error: 'return' outside of function
+// Original Line : return IdentifyMachineContract.new(names, contractConfig, contractCallback)
+IdentifyMachineContract.new(names, contractConfig, contractCallback)

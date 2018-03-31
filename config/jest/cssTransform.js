@@ -5,7 +5,7 @@ module.exports = {
   process() {
     return 'module.exports = {};';
   },
-  getCacheKey(fileData, filename) {
+  getCacheKey(fileData, filename) { // eslint-disable-line no-unused-vars
     // The output is always the same.
     return 'cssTransform';
   },
