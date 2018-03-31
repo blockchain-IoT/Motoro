@@ -25,9 +25,9 @@ class App extends Component {
         },
         registerMachine: {
           _disabled: true,
-          model: 'a',
-          make: 'a',
-          vin: 'a'
+          model: '',
+          make: '',
+          vin: ''
         },
       },
       contracts: {
@@ -71,7 +71,8 @@ class App extends Component {
     const MachineOwner = contract(MachineOwnerContract);
     MachineOwner.setProvider(this.state.web3.currentProvider);
 
-    const address = this.state.contracts.machineOwner.address;
+    const { forms, contracts } = this.state;
+    const address = contracts.machineOwner.address;
     // eslint-disable-next-line one-var,no-unused-vars
     let _,
       model,
@@ -79,29 +80,29 @@ class App extends Component {
       vin;
     ({
       _, model, make, vin
-    } = this.state.forms.registerMachine);
+    } = forms.registerMachine);
 
-    this.state.web3.eth.getAccounts((error, accounts) => {
-      MachineOwner.at(address).then((instance) => {
-        instance.createNewMachine(model, make, vin, { from: accounts[0] })
-          .then((result) => {
-            const state = { ...this.state };
-            const machine = {
-              model,
-              make,
-              vin,
-              address: result.logs[0].args.newMachine
-            };
-            state.contracts.machineOwner.machines.push(machine);
-            this.setState(state);
-          });
-      });
+    return this.state.web3.eth.getAccounts((error, accounts) => {
+      MachineOwner.at(address)
+        .then(instance => instance.createNewMachine(model, make, vin, { from: accounts[0] }))
+        .then((result) => {
+          const state = { ...this.state };
+          const machine = {
+            model,
+            make,
+            vin,
+            address: result.logs[0].args.newMachine
+          };
+          contracts.machineOwner.machines.push(machine);
+          this.setState(state);
+        });
     });
   }
 
   machineFormChangedHandler(e) {
     const name = e.target.name;
     const value = e.target.value;
+    const address = this.state.contracts.machineOwner.address;
 
     // Update form
     const form = { ...this.state.forms.registerMachine };
@@ -109,9 +110,9 @@ class App extends Component {
 
     // Validate form input
     const {
-      _disabled, model, make, vin // eslint-disable-line no-unused-vars
+      model, make, vin
     } = form;
-    const isValid = make !== '' && model !== '' && vin !== '';
+    const isValid = make !== '' && model !== '' && vin !== '' && address;
     form._disabled = !isValid;
 
     // Update state
@@ -119,7 +120,6 @@ class App extends Component {
     state.forms.registerMachine = form;
     this.setState(state);
   }
-
   machineFormSubmittedHandler(e) {
     e.preventDefault();
     if (!this.state.forms.registerMachine._disabled) {
@@ -135,20 +135,21 @@ class App extends Component {
   }
 
   render() {
+    const { contracts, forms } = this.state;
     return (
       <div className="App">
         <div className="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
           <div className="uk-grid-match" data-uk-grid-margin>
             <RegisterOwnerForm
-              onSubmit={e => this.ownerFormSubmittedHandler(e)}
-              state={this.state.forms.registerOwner}
+              onSubmit={this.ownerFormSubmittedHandler}
+              state={forms.registerOwner}
             />
             <RegisterMachineForm
-              onChange={e => this.machineFormChangedHandler(e)}
-              onSubmit={e => this.machineFormSubmittedHandler(e)}
-              state={this.state.forms.registerMachine}
+              onChange={this.machineFormChangedHandler}
+              onSubmit={this.machineFormSubmittedHandler}
+              state={forms.registerMachine}
             />
-            <MachineList machines={this.state.contracts.machineOwner.machines} />
+            <MachineList machines={contracts.machineOwner.machines} />
           </div>
         </div>
       </div>
