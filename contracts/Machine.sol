@@ -31,8 +31,7 @@ contract Machine is Ownable {
    * @dev The MachineRepresentation constructor sets the original `owner` of the contract to the sender
    * account. It also sets the model, make and id of the machine.
    */
-  function Machine(ERC20Basic _token, string _model, string _make, bytes32 _id) public
-  {
+  function Machine(ERC20Basic _token, string _model, string _make, bytes32 _id) public {
     token = _token;
     model = _model;
     make = _make;
@@ -71,7 +70,7 @@ contract Machine is Ownable {
   /**
    * @dev Allows the pendingRenter address to finalize the transfer and provide a token contract, with the cash to hold
    */
-  function claimRental() onlyPendingRenter public {
+  function claimRental() public onlyPendingRenter {
     require(rentalPrice <= token.balanceOf(pendingRenter));
     renter = pendingRenter;
     pendingRenter = address(0);
@@ -81,8 +80,8 @@ contract Machine is Ownable {
   /**
    * @dev Allows the renter address to return the machine, and transfer the cash from the held contract, to the machine owner
    */
-  function returnMachine() onlyRenter public {
-    uint256 amount = token.balanceOf(this);
+  function returnMachine() public onlyRenter {
+    uint256 amount = token.balanceOf(renter);
     require(rentalPrice <= amount);
     token.safeTransfer(owner, amount);
     MachineReturned(this, renter, now);
@@ -91,7 +90,7 @@ contract Machine is Ownable {
   /**
    * @dev Allows the owner address to confirm the return of the machine
    */
-  function confirmReturn() onlyOwner public {
+  function confirmReturn() public onlyOwner  {
     renter = address(0);
     rentalPrice = 0;
     rentalCount++;
