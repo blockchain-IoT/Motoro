@@ -1,6 +1,6 @@
 pragma solidity ^0.4.18;
 
-import "zeppelin-solidity/contracts/token/ERC20/BasicToken.sol";
+import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 
 
 /**
@@ -8,7 +8,7 @@ import "zeppelin-solidity/contracts/token/ERC20/BasicToken.sol";
  */
 
 
-contract MachineToken is BasicToken {
+contract MachineToken is StandardToken {
 
   string private constant NAME = "Machine Token";
   string private constant SYMBOL = "MCT";
