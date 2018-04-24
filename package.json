@@ -2,6 +2,9 @@
   "name": "blockchain-iot-core",
   "version": "0.1.0",
   "description": "Blockchain IoT core toolset",
+  "engines" : {
+    "node" : ">=9.4"
+  },
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
