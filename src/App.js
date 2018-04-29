@@ -141,12 +141,12 @@ class App extends Component {
         <div className="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
           <div className="uk-grid-match" data-uk-grid-margin>
             <RegisterOwnerForm
-              onSubmit={this.ownerFormSubmittedHandler}
+              onSubmit={this.ownerFormSubmittedHandler.bind(this)}
               state={forms.registerOwner}
             />
             <RegisterMachineForm
-              onChange={this.machineFormChangedHandler}
-              onSubmit={this.machineFormSubmittedHandler}
+              onChange={this.machineFormChangedHandler.bind(this)}
+              onSubmit={this.machineFormSubmittedHandler.bind(this)}
               state={forms.registerMachine}
             />
             <MachineList machines={contracts.machineOwner.machines} />
