@@ -2,8 +2,8 @@
   "name": "blockchain-iot-core",
   "version": "0.1.0",
   "description": "Blockchain IoT core toolset",
-  "engines" : {
-    "node" : ">=9.4"
+  "engines": {
+    "node": ">=9.4"
   },
   "devDependencies": {
     "autoprefixer": "6.5.1",
@@ -19,7 +19,7 @@
     "css-loader": "0.26.0",
     "detect-port": "1.0.1",
     "dotenv": "2.0.0",
-    "eslint": "^4.9.0",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-react-app": "^0.5.0",
     "eslint-loader": "1.6.0",
@@ -57,11 +57,11 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "require-from-string": "1.2.0",
-    "solc": "^0.4.21",
+    "solc": "^0.4.24",
     "solc-js": "^0.4.20",
-    "uikit": "^3.0.0-beta.40",
+    "uikit": "^3.0.0-rc.6",
     "web3": "^0.20.1",
-    "zeppelin-solidity": "^1.6.0"
+    "zeppelin-solidity": "^1.10.0"
   },
   "scripts": {
     "start": "node scripts/start.js",

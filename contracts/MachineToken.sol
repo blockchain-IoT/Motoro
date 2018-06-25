@@ -1,6 +1,6 @@
-pragma solidity ^0.4.18;
+pragma solidity 0.4.24;
 
-import "zeppelin-solidity/contracts/token/ERC20/BasicToken.sol";
+import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 
 
 /**
@@ -8,14 +8,14 @@ import "zeppelin-solidity/contracts/token/ERC20/BasicToken.sol";
  */
 
 
-contract MachineToken is BasicToken {
+contract MachineToken is StandardToken {
 
   string private constant NAME = "Machine Token";
   string private constant SYMBOL = "MCT";
   uint256 private constant DECIMAL = 18;
   uint256 private constant TOTAL_SUPPLY = 10 ** (DECIMAL + 10);
 
-  function MachineToken() public {
+  constructor() public {
     totalSupply_ = TOTAL_SUPPLY;
     balances[msg.sender] = TOTAL_SUPPLY;
   }
