@@ -2,8 +2,8 @@
   "name": "blockchain-iot-core",
   "version": "0.1.0",
   "description": "Blockchain IoT core toolset",
-  "engines" : {
-    "node" : ">=9.4"
+  "engines": {
+    "node": ">=9.4"
   },
   "devDependencies": {
     "autoprefixer": "6.5.1",
@@ -31,6 +31,7 @@
     "file-loader": "0.9.0",
     "filesize": "3.3.0",
     "fs-extra": "0.30.0",
+    "growl": "^1.10.0",
     "gzip-size": "3.0.0",
     "html-webpack-plugin": "2.24.0",
     "http-proxy-middleware": "0.17.2",
